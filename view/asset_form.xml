@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<data>
+    <xpath expr="/form/label[@name='residual_value']" position="before">
+        <newline/>
+            <label name="porcentaje" xalign="1.0" xexpand="1"/>
+            <group id="asset_percent" colspan="1" col="2" xexpand="0">
+                <field name="porcentaje" factor="100" xalign="1.0" xexpand="0"/>
+                <label name="porcentaje" string="%" xalign="0.0" xexpand="1" xfill="1"/>
+            </group>
+    </xpath>
+    <xpath expr="/form/label[@name='residual_value']" position="replace">
+        <label name="residual_value"/>
+    </xpath>
+    <xpath expr="/form/field[@name='residual_value']" position="replace">
+        <field name="residual_value"/>
+        <newline/>
+    </xpath>
+</data>
