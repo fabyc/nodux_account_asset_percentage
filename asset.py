@@ -55,3 +55,11 @@ class Asset():
                 residual =  self.company.currency.round(residual)
                 res['residual_value'] = residual
         return res
+
+    #metodo para cambiar porcentaje cuando cambia value
+    @fields.depends('value', 'porcentaje', 'residual_value', 'company')
+    def on_change_value(self):
+        res = {}
+        res['porcentaje'] = None
+        res['residual_value'] = None
+        return res
