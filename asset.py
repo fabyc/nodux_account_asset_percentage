@@ -49,7 +49,7 @@ class Asset():
     def on_change_porcentaje(self):
         res = {}
         if self.porcentaje:
-            porcentaje =self.porcentaje
+            porcentaje =self.porcentaje / 100
             if self.value and self.company:
                 residual=(self.value * porcentaje)
                 residual =  self.company.currency.round(residual)
